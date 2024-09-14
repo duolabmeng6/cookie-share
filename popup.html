@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>cookie分享</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4; /* 更改背景颜色 */
+      margin: 0;
+      width: 350px;
+      box-sizing: border-box;
+      overflow: hidden; /* 禁用滚动条 */
+    }
+
+    .container {
+      background-color: #ffffff; /* 保持白色背景 */
+      padding: 20px; /* 增加内边距 */
+      border-radius: 10px; /* 增加圆角 */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 增加阴影 */
+    }
+
+    h1 {
+      color: #333;
+      margin: 0 0 20px; /* 增加底部间距 */
+      font-size: 26px; /* 增加标题字体大小 */
+      text-align: center;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px; /* 增加内边距 */
+      margin-bottom: 15px;
+      border: 1px solid #ccc; /* 更改边框颜色 */
+      border-radius: 5px; /* 增加圆角 */
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.3s; /* 增加过渡效果 */
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #007bff; /* 聚焦时边框颜色 */
+      outline: none; /* 去掉默认轮廓 */
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* 增加按钮间距 */
+    }
+
+    button {
+      background-color: #007bff; /* 更改按钮颜色 */
+      color: white;
+      border: none;
+      padding: 12px; /* 增加内边距 */
+      border-radius: 5px; /* 增加圆角 */
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      font-size: 16px; /* 增加字体大小 */
+    }
+
+    button:hover {
+      background-color: #0056b3; /* 鼠标悬停时颜色 */
+      transform: scale(1.05); /* 鼠标悬停时放大 */
+    }
+
+    .danger-button {
+      background-color: #e74c3c; /* 危险按钮颜色 */
+    }
+
+    .danger-button:hover {
+      background-color: #c0392b; /* 危险按钮悬停颜色 */
+    }
+
+    #message,
+    #errorMessage {
+      margin-top: 15px;
+      padding: 10px; /* 增加内边距 */
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    #message {
+      background-color: #e8f5e9; /* 成功消息背景 */
+      color: #1b5e20;
+    }
+
+    #errorMessage {
+      background-color: #ffebee; /* 错误消息背景 */
+      color: #b71c1c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cookie分享</h1>
+
+    <div id="message" style="display: none; margin-bottom: 10px;"></div>
+    <div id="errorMessage" style="display: none; margin-bottom: 10px;"></div>
+
+    <span >唯一标识符:</span><input type="text" id="cookieId" placeholder="输入唯一的cookie ID" />
+
+    <div class="button-group" style="margin-bottom: 20px;">
+      <button id="sendButton" style="padding: 6px; background-color: #28a745;">发送Cookies</button> <!-- 更改按钮颜色和大小 -->
+      <button id="receiveButton" style="padding: 6px; background-color: #17a2b8;">接收Cookies</button> <!-- 更改按钮颜色和大小 -->
+    </div>
+
+    <span>API端点:</span><input type="text" id="customUrl" placeholder="输入自定义URL" />
+    <span>密码:</span><input type="password" id="password" placeholder="输入密码" />
+    <div class="button-group">
+      <button id="saveUrlButton" style="padding: 6px;">保存配置</button> <!-- 更改按钮大小 -->
+      <button id="deleteAllButton" class="danger-button" style="padding: 6px;">删除全部数据</button> <!-- 更改按钮大小 -->
+    </div>
+
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

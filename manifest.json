@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "cookie分享",
+  "version": "0.1.1",
+  "description": "与朋友发送和接收cookie",
+  "permissions": ["cookies", "activeTab", "tabs", "storage", "<all_urls>"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
