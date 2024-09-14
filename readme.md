@@ -45,7 +45,7 @@ Cookie分享 是一个 Chrome 扩展，允许用户在不同设备或浏览器�
 
 1. [注册](https://dash.cloudflare.com/sign-up) Cloudflare 账户并创建一个 Worker。
 
-2. 复制 `_worker.js` 文件的内容到新创建的 Worker 中。
+2. 复制 `worker.js` 文件的内容到新创建的 Worker 中。
 
 3. 在 Cloudflare Worker 的设置中，添加以下环境变量：
    - `ADMIN_PASSWORD`: 设置一个强密码
