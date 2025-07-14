@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "cookie分享",
   "version": "0.1.1",
   "description": "与朋友发送和接收cookie",
